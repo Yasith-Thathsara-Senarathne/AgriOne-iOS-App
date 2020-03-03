@@ -1,0 +1,929 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C80967AD6D42EA74ABD2AB1 /* Pods_AgriOne_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */; };
+		F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB90EA240CC027007DAB18 /* AppDelegate.swift */; };
+		F4AB9102240CC029007DAB18 /* AgriOne_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9101240CC029007DAB18 /* AgriOne_AppTests.swift */; };
+		F4AB910D240CC029007DAB18 /* AgriOne_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB910C240CC029007DAB18 /* AgriOne_AppUITests.swift */; };
+		F4AB9129240CC23C007DAB18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9125240CC23C007DAB18 /* LoginViewController.swift */; };
+		F4AB912A240CC23C007DAB18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9126240CC23C007DAB18 /* HomeViewController.swift */; };
+		F4AB912B240CC23C007DAB18 /* DetectionOfDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9127240CC23C007DAB18 /* DetectionOfDaysViewController.swift */; };
+		F4AB912C240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9128240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift */; };
+		F4AB9130240CC247007DAB18 /* Dod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB912E240CC247007DAB18 /* Dod.swift */; };
+		F4AB9131240CC247007DAB18 /* DODesiease.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB912F240CC247007DAB18 /* DODesiease.swift */; };
+		F4AB9143240CC257007DAB18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9133240CC257007DAB18 /* LaunchScreen.storyboard */; };
+		F4AB9144240CC257007DAB18 /* DatePickerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9136240CC257007DAB18 /* DatePickerTextView.swift */; };
+		F4AB9145240CC257007DAB18 /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9137240CC257007DAB18 /* ButtonWithImage.swift */; };
+		F4AB9146240CC257007DAB18 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9138240CC257007DAB18 /* DatePickerView.swift */; };
+		F4AB9147240CC257007DAB18 /* AverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9139240CC257007DAB18 /* AverageView.swift */; };
+		F4AB9148240CC257007DAB18 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB913A240CC257007DAB18 /* CircleProgressView.swift */; };
+		F4AB9149240CC257007DAB18 /* TextFieldWithSeperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB913B240CC257007DAB18 /* TextFieldWithSeperator.swift */; };
+		F4AB914A240CC257007DAB18 /* DODaysTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB913D240CC257007DAB18 /* DODaysTVCell.swift */; };
+		F4AB914B240CC257007DAB18 /* DODesieaseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB913E240CC257007DAB18 /* DODesieaseTVCell.swift */; };
+		F4AB914C240CC257007DAB18 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9140240CC257007DAB18 /* AppColor.swift */; };
+		F4AB914D240CC257007DAB18 /* Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9141240CC257007DAB18 /* Extenstion.swift */; };
+		F4AB914E240CC257007DAB18 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9142240CC257007DAB18 /* AppFont.swift */; };
+		F4AB9157240CCD1C007DAB18 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9151240CCD1C007DAB18 /* Roboto-Medium.ttf */; };
+		F4AB9158240CCD1C007DAB18 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9152240CCD1C007DAB18 /* Roboto-Light.ttf */; };
+		F4AB9159240CCD1C007DAB18 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9153240CCD1C007DAB18 /* Roboto-Regular.ttf */; };
+		F4AB915A240CCD1C007DAB18 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9154240CCD1C007DAB18 /* Roboto-Bold.ttf */; };
+		F4AB915B240CCD1C007DAB18 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9155240CCD1C007DAB18 /* Roboto-Thin.ttf */; };
+		F4AB915C240CCD1C007DAB18 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9156240CCD1C007DAB18 /* Roboto-Black.ttf */; };
+		F4AB915E240CCF99007DAB18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AB915D240CCF99007DAB18 /* Assets.xcassets */; };
+		F4DA068D240EBB04000F4C35 /* MonthlySpredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */; };
+		F4DA068F240EC343000F4C35 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA068E240EC343000F4C35 /* LineChart.swift */; };
+		F4DA0691240ED28B000F4C35 /* WeeklySpredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */; };
+		F4DA0693240ED397000F4C35 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA0692240ED397000F4C35 /* BarChart.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4AB90FE240CC029007DAB18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AB90DF240CC027007DAB18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4AB90E6240CC027007DAB18;
+			remoteInfo = "AgriOne App";
+		};
+		F4AB9109240CC029007DAB18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4AB90DF240CC027007DAB18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4AB90E6240CC027007DAB18;
+			remoteInfo = "AgriOne App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		594486CC5B8FEF8957B5CCBE /* Pods-AgriOne App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgriOne App.debug.xcconfig"; path = "Target Support Files/Pods-AgriOne App/Pods-AgriOne App.debug.xcconfig"; sourceTree = "<group>"; };
+		73DE4B72A5BA3C601B3483D0 /* Pods-AgriOne App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgriOne App.release.xcconfig"; path = "Target Support Files/Pods-AgriOne App/Pods-AgriOne App.release.xcconfig"; sourceTree = "<group>"; };
+		AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgriOne_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AB90E7240CC027007DAB18 /* AgriOne App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgriOne App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AB90EA240CC027007DAB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4AB90F8240CC029007DAB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AB90FD240CC029007DAB18 /* AgriOne AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AgriOne AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AB9101240CC029007DAB18 /* AgriOne_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriOne_AppTests.swift; sourceTree = "<group>"; };
+		F4AB9103240CC029007DAB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AB9108240CC029007DAB18 /* AgriOne AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AgriOne AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AB910C240CC029007DAB18 /* AgriOne_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriOne_AppUITests.swift; sourceTree = "<group>"; };
+		F4AB910E240CC029007DAB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AB9125240CC23C007DAB18 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F4AB9126240CC23C007DAB18 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F4AB9127240CC23C007DAB18 /* DetectionOfDaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectionOfDaysViewController.swift; sourceTree = "<group>"; };
+		F4AB9128240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectionOfDesieaseViewController.swift; sourceTree = "<group>"; };
+		F4AB912E240CC247007DAB18 /* Dod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dod.swift; sourceTree = "<group>"; };
+		F4AB912F240CC247007DAB18 /* DODesiease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODesiease.swift; sourceTree = "<group>"; };
+		F4AB9134240CC257007DAB18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4AB9136240CC257007DAB18 /* DatePickerTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTextView.swift; sourceTree = "<group>"; };
+		F4AB9137240CC257007DAB18 /* ButtonWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
+		F4AB9138240CC257007DAB18 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		F4AB9139240CC257007DAB18 /* AverageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AverageView.swift; sourceTree = "<group>"; };
+		F4AB913A240CC257007DAB18 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		F4AB913B240CC257007DAB18 /* TextFieldWithSeperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithSeperator.swift; sourceTree = "<group>"; };
+		F4AB913D240CC257007DAB18 /* DODaysTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODaysTVCell.swift; sourceTree = "<group>"; };
+		F4AB913E240CC257007DAB18 /* DODesieaseTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODesieaseTVCell.swift; sourceTree = "<group>"; };
+		F4AB9140240CC257007DAB18 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		F4AB9141240CC257007DAB18 /* Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstion.swift; sourceTree = "<group>"; };
+		F4AB9142240CC257007DAB18 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		F4AB9151240CCD1C007DAB18 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F4AB9152240CCD1C007DAB18 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		F4AB9153240CCD1C007DAB18 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F4AB9154240CCD1C007DAB18 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		F4AB9155240CCD1C007DAB18 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		F4AB9156240CCD1C007DAB18 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		F4AB915D240CCF99007DAB18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySpredViewController.swift; sourceTree = "<group>"; };
+		F4DA068E240EC343000F4C35 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpredViewController.swift; sourceTree = "<group>"; };
+		F4DA0692240ED397000F4C35 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4AB90E4240CC027007DAB18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C80967AD6D42EA74ABD2AB1 /* Pods_AgriOne_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AB90FA240CC029007DAB18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AB9105240CC029007DAB18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		299F2B1AF90B4A386B40316E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				594486CC5B8FEF8957B5CCBE /* Pods-AgriOne App.debug.xcconfig */,
+				73DE4B72A5BA3C601B3483D0 /* Pods-AgriOne App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		856CBC501A566F45177954BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4AB90DE240CC027007DAB18 = {
+			isa = PBXGroup;
+			children = (
+				F4AB90E9240CC027007DAB18 /* AgriOne App */,
+				F4AB9100240CC029007DAB18 /* AgriOne AppTests */,
+				F4AB910B240CC029007DAB18 /* AgriOne AppUITests */,
+				F4AB90E8240CC027007DAB18 /* Products */,
+				299F2B1AF90B4A386B40316E /* Pods */,
+				856CBC501A566F45177954BC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4AB90E8240CC027007DAB18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB90E7240CC027007DAB18 /* AgriOne App.app */,
+				F4AB90FD240CC029007DAB18 /* AgriOne AppTests.xctest */,
+				F4AB9108240CC029007DAB18 /* AgriOne AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4AB90E9240CC027007DAB18 /* AgriOne App */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB912D240CC247007DAB18 /* Model */,
+				F4AB9132240CC257007DAB18 /* View */,
+				F4AB9123240CC23C007DAB18 /* Controller */,
+				F4AB913F240CC257007DAB18 /* Utilities */,
+				F4AB914F240CCD1C007DAB18 /* Resources */,
+				F4AB911A240CC075007DAB18 /* System_Support */,
+			);
+			path = "AgriOne App";
+			sourceTree = "<group>";
+		};
+		F4AB9100240CC029007DAB18 /* AgriOne AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9101240CC029007DAB18 /* AgriOne_AppTests.swift */,
+				F4AB9103240CC029007DAB18 /* Info.plist */,
+			);
+			path = "AgriOne AppTests";
+			sourceTree = "<group>";
+		};
+		F4AB910B240CC029007DAB18 /* AgriOne AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB910C240CC029007DAB18 /* AgriOne_AppUITests.swift */,
+				F4AB910E240CC029007DAB18 /* Info.plist */,
+			);
+			path = "AgriOne AppUITests";
+			sourceTree = "<group>";
+		};
+		F4AB911A240CC075007DAB18 /* System_Support */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB915D240CCF99007DAB18 /* Assets.xcassets */,
+				F4AB90EA240CC027007DAB18 /* AppDelegate.swift */,
+				F4AB90F8240CC029007DAB18 /* Info.plist */,
+			);
+			path = System_Support;
+			sourceTree = "<group>";
+		};
+		F4AB9123240CC23C007DAB18 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9124240CC23C007DAB18 /* AuthController */,
+				F4AB9126240CC23C007DAB18 /* HomeViewController.swift */,
+				F4AB9127240CC23C007DAB18 /* DetectionOfDaysViewController.swift */,
+				F4AB9128240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift */,
+				F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */,
+				F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4AB9124240CC23C007DAB18 /* AuthController */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9125240CC23C007DAB18 /* LoginViewController.swift */,
+			);
+			path = AuthController;
+			sourceTree = "<group>";
+		};
+		F4AB912D240CC247007DAB18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB912E240CC247007DAB18 /* Dod.swift */,
+				F4AB912F240CC247007DAB18 /* DODesiease.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4AB9132240CC257007DAB18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9133240CC257007DAB18 /* LaunchScreen.storyboard */,
+				F4AB9135240CC257007DAB18 /* CustomView */,
+				F4AB913C240CC257007DAB18 /* TVCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4AB9135240CC257007DAB18 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9136240CC257007DAB18 /* DatePickerTextView.swift */,
+				F4AB9137240CC257007DAB18 /* ButtonWithImage.swift */,
+				F4AB9138240CC257007DAB18 /* DatePickerView.swift */,
+				F4AB9139240CC257007DAB18 /* AverageView.swift */,
+				F4AB913A240CC257007DAB18 /* CircleProgressView.swift */,
+				F4AB913B240CC257007DAB18 /* TextFieldWithSeperator.swift */,
+				F4DA068E240EC343000F4C35 /* LineChart.swift */,
+				F4DA0692240ED397000F4C35 /* BarChart.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		F4AB913C240CC257007DAB18 /* TVCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB913D240CC257007DAB18 /* DODaysTVCell.swift */,
+				F4AB913E240CC257007DAB18 /* DODesieaseTVCell.swift */,
+			);
+			path = TVCell;
+			sourceTree = "<group>";
+		};
+		F4AB913F240CC257007DAB18 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9140240CC257007DAB18 /* AppColor.swift */,
+				F4AB9141240CC257007DAB18 /* Extenstion.swift */,
+				F4AB9142240CC257007DAB18 /* AppFont.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F4AB914F240CCD1C007DAB18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9150240CCD1C007DAB18 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4AB9150240CCD1C007DAB18 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9151240CCD1C007DAB18 /* Roboto-Medium.ttf */,
+				F4AB9152240CCD1C007DAB18 /* Roboto-Light.ttf */,
+				F4AB9153240CCD1C007DAB18 /* Roboto-Regular.ttf */,
+				F4AB9154240CCD1C007DAB18 /* Roboto-Bold.ttf */,
+				F4AB9155240CCD1C007DAB18 /* Roboto-Thin.ttf */,
+				F4AB9156240CCD1C007DAB18 /* Roboto-Black.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4AB90E6240CC027007DAB18 /* AgriOne App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AB9111240CC029007DAB18 /* Build configuration list for PBXNativeTarget "AgriOne App" */;
+			buildPhases = (
+				0FE0346705C3146E40C24D7F /* [CP] Check Pods Manifest.lock */,
+				F4AB90E3240CC027007DAB18 /* Sources */,
+				F4AB90E4240CC027007DAB18 /* Frameworks */,
+				F4AB90E5240CC027007DAB18 /* Resources */,
+				F714FE2B45A0B0DE198D1B35 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AgriOne App";
+			productName = "AgriOne App";
+			productReference = F4AB90E7240CC027007DAB18 /* AgriOne App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4AB90FC240CC029007DAB18 /* AgriOne AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AB9114240CC029007DAB18 /* Build configuration list for PBXNativeTarget "AgriOne AppTests" */;
+			buildPhases = (
+				F4AB90F9240CC029007DAB18 /* Sources */,
+				F4AB90FA240CC029007DAB18 /* Frameworks */,
+				F4AB90FB240CC029007DAB18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4AB90FF240CC029007DAB18 /* PBXTargetDependency */,
+			);
+			name = "AgriOne AppTests";
+			productName = "AgriOne AppTests";
+			productReference = F4AB90FD240CC029007DAB18 /* AgriOne AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4AB9107240CC029007DAB18 /* AgriOne AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4AB9117240CC029007DAB18 /* Build configuration list for PBXNativeTarget "AgriOne AppUITests" */;
+			buildPhases = (
+				F4AB9104240CC029007DAB18 /* Sources */,
+				F4AB9105240CC029007DAB18 /* Frameworks */,
+				F4AB9106240CC029007DAB18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4AB910A240CC029007DAB18 /* PBXTargetDependency */,
+			);
+			name = "AgriOne AppUITests";
+			productName = "AgriOne AppUITests";
+			productReference = F4AB9108240CC029007DAB18 /* AgriOne AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4AB90DF240CC027007DAB18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Yasith Thathsara Senarathne";
+				TargetAttributes = {
+					F4AB90E6240CC027007DAB18 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					F4AB90FC240CC029007DAB18 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F4AB90E6240CC027007DAB18;
+					};
+					F4AB9107240CC029007DAB18 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = F4AB90E6240CC027007DAB18;
+					};
+				};
+			};
+			buildConfigurationList = F4AB90E2240CC027007DAB18 /* Build configuration list for PBXProject "AgriOne App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4AB90DE240CC027007DAB18;
+			productRefGroup = F4AB90E8240CC027007DAB18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4AB90E6240CC027007DAB18 /* AgriOne App */,
+				F4AB90FC240CC029007DAB18 /* AgriOne AppTests */,
+				F4AB9107240CC029007DAB18 /* AgriOne AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4AB90E5240CC027007DAB18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AB915B240CCD1C007DAB18 /* Roboto-Thin.ttf in Resources */,
+				F4AB9143240CC257007DAB18 /* LaunchScreen.storyboard in Resources */,
+				F4AB915C240CCD1C007DAB18 /* Roboto-Black.ttf in Resources */,
+				F4AB915A240CCD1C007DAB18 /* Roboto-Bold.ttf in Resources */,
+				F4AB9159240CCD1C007DAB18 /* Roboto-Regular.ttf in Resources */,
+				F4AB9158240CCD1C007DAB18 /* Roboto-Light.ttf in Resources */,
+				F4AB915E240CCF99007DAB18 /* Assets.xcassets in Resources */,
+				F4AB9157240CCD1C007DAB18 /* Roboto-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AB90FB240CC029007DAB18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AB9106240CC029007DAB18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FE0346705C3146E40C24D7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgriOne App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F714FE2B45A0B0DE198D1B35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AgriOne App/Pods-AgriOne App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AgriOne App/Pods-AgriOne App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AgriOne App/Pods-AgriOne App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4AB90E3240CC027007DAB18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AB9130240CC247007DAB18 /* Dod.swift in Sources */,
+				F4AB914B240CC257007DAB18 /* DODesieaseTVCell.swift in Sources */,
+				F4DA0691240ED28B000F4C35 /* WeeklySpredViewController.swift in Sources */,
+				F4AB9131240CC247007DAB18 /* DODesiease.swift in Sources */,
+				F4AB914E240CC257007DAB18 /* AppFont.swift in Sources */,
+				F4DA068F240EC343000F4C35 /* LineChart.swift in Sources */,
+				F4AB9129240CC23C007DAB18 /* LoginViewController.swift in Sources */,
+				F4AB914A240CC257007DAB18 /* DODaysTVCell.swift in Sources */,
+				F4DA0693240ED397000F4C35 /* BarChart.swift in Sources */,
+				F4AB9146240CC257007DAB18 /* DatePickerView.swift in Sources */,
+				F4AB914D240CC257007DAB18 /* Extenstion.swift in Sources */,
+				F4AB914C240CC257007DAB18 /* AppColor.swift in Sources */,
+				F4AB9148240CC257007DAB18 /* CircleProgressView.swift in Sources */,
+				F4AB9145240CC257007DAB18 /* ButtonWithImage.swift in Sources */,
+				F4AB9149240CC257007DAB18 /* TextFieldWithSeperator.swift in Sources */,
+				F4AB9147240CC257007DAB18 /* AverageView.swift in Sources */,
+				F4AB912C240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift in Sources */,
+				F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */,
+				F4DA068D240EBB04000F4C35 /* MonthlySpredViewController.swift in Sources */,
+				F4AB9144240CC257007DAB18 /* DatePickerTextView.swift in Sources */,
+				F4AB912B240CC23C007DAB18 /* DetectionOfDaysViewController.swift in Sources */,
+				F4AB912A240CC23C007DAB18 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AB90F9240CC029007DAB18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AB9102240CC029007DAB18 /* AgriOne_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AB9104240CC029007DAB18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4AB910D240CC029007DAB18 /* AgriOne_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4AB90FF240CC029007DAB18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4AB90E6240CC027007DAB18 /* AgriOne App */;
+			targetProxy = F4AB90FE240CC029007DAB18 /* PBXContainerItemProxy */;
+		};
+		F4AB910A240CC029007DAB18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4AB90E6240CC027007DAB18 /* AgriOne App */;
+			targetProxy = F4AB9109240CC029007DAB18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4AB9133240CC257007DAB18 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4AB9134240CC257007DAB18 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4AB910F240CC029007DAB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4AB9110240CC029007DAB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4AB9112240CC029007DAB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 594486CC5B8FEF8957B5CCBE /* Pods-AgriOne App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U6C6VD933;
+				INFOPLIST_FILE = "AgriOne App/System_Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-weak_framework",
+					"\"Charts\"",
+					"-weak_framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleDataTransportCCTSupport\"",
+					"-weak_framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-weak_framework",
+					"\"MNkSupportUtilities\"",
+					"-weak_framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"nanopb\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yts.AgriOne-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4AB9113240CC029007DAB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73DE4B72A5BA3C601B3483D0 /* Pods-AgriOne App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U6C6VD933;
+				INFOPLIST_FILE = "AgriOne App/System_Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-weak_framework",
+					"\"Charts\"",
+					"-weak_framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleDataTransportCCTSupport\"",
+					"-weak_framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-weak_framework",
+					"\"MNkSupportUtilities\"",
+					"-weak_framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"nanopb\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yts.AgriOne-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4AB9115240CC029007DAB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U6C6VD933;
+				INFOPLIST_FILE = "AgriOne AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yts.AgriOne-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgriOne App.app/AgriOne App";
+			};
+			name = Debug;
+		};
+		F4AB9116240CC029007DAB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U6C6VD933;
+				INFOPLIST_FILE = "AgriOne AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yts.AgriOne-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgriOne App.app/AgriOne App";
+			};
+			name = Release;
+		};
+		F4AB9118240CC029007DAB18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U6C6VD933;
+				INFOPLIST_FILE = "AgriOne AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yts.AgriOne-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AgriOne App";
+			};
+			name = Debug;
+		};
+		F4AB9119240CC029007DAB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U6C6VD933;
+				INFOPLIST_FILE = "AgriOne AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yts.AgriOne-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AgriOne App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4AB90E2240CC027007DAB18 /* Build configuration list for PBXProject "AgriOne App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AB910F240CC029007DAB18 /* Debug */,
+				F4AB9110240CC029007DAB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AB9111240CC029007DAB18 /* Build configuration list for PBXNativeTarget "AgriOne App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AB9112240CC029007DAB18 /* Debug */,
+				F4AB9113240CC029007DAB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AB9114240CC029007DAB18 /* Build configuration list for PBXNativeTarget "AgriOne AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AB9115240CC029007DAB18 /* Debug */,
+				F4AB9116240CC029007DAB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4AB9117240CC029007DAB18 /* Build configuration list for PBXNativeTarget "AgriOne AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4AB9118240CC029007DAB18 /* Debug */,
+				F4AB9119240CC029007DAB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4AB90DF240CC027007DAB18 /* Project object */;
+}

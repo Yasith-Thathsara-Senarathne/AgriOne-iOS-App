@@ -9,6 +9,7 @@ target 'AgriOne App' do
     pod 'MNkSupportUtilities'
     pod 'Charts'
     pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
     pod "LinearProgressBar"
 
 end

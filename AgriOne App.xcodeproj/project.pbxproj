@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C80967AD6D42EA74ABD2AB1 /* Pods_AgriOne_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */; };
+		F24D9853240F7AEA0013B948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F24D9852240F7AE90013B948 /* GoogleService-Info.plist */; };
+		F24D9856240F7CFD0013B948 /* FirebaseAuthAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24D9855240F7CFD0013B948 /* FirebaseAuthAccessible.swift */; };
 		F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB90EA240CC027007DAB18 /* AppDelegate.swift */; };
 		F4AB9102240CC029007DAB18 /* AgriOne_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9101240CC029007DAB18 /* AgriOne_AppTests.swift */; };
 		F4AB910D240CC029007DAB18 /* AgriOne_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB910C240CC029007DAB18 /* AgriOne_AppUITests.swift */; };
@@ -63,6 +65,8 @@
 		594486CC5B8FEF8957B5CCBE /* Pods-AgriOne App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgriOne App.debug.xcconfig"; path = "Target Support Files/Pods-AgriOne App/Pods-AgriOne App.debug.xcconfig"; sourceTree = "<group>"; };
 		73DE4B72A5BA3C601B3483D0 /* Pods-AgriOne App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgriOne App.release.xcconfig"; path = "Target Support Files/Pods-AgriOne App/Pods-AgriOne App.release.xcconfig"; sourceTree = "<group>"; };
 		AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgriOne_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24D9852240F7AE90013B948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F24D9855240F7CFD0013B948 /* FirebaseAuthAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthAccessible.swift; sourceTree = "<group>"; };
 		F4AB90E7240CC027007DAB18 /* AgriOne App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgriOne App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB90EA240CC027007DAB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AB90F8240CC029007DAB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F24D9854240F7CE60013B948 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F24D9855240F7CFD0013B948 /* FirebaseAuthAccessible.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		F4AB90DE240CC027007DAB18 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 				F4AB9123240CC23C007DAB18 /* Controller */,
 				F4AB913F240CC257007DAB18 /* Utilities */,
 				F4AB914F240CCD1C007DAB18 /* Resources */,
+				F24D9854240F7CE60013B948 /* Protocol */,
 				F4AB911A240CC075007DAB18 /* System_Support */,
 			);
 			path = "AgriOne App";
@@ -205,6 +218,7 @@
 				F4AB915D240CCF99007DAB18 /* Assets.xcassets */,
 				F4AB90EA240CC027007DAB18 /* AppDelegate.swift */,
 				F4AB90F8240CC029007DAB18 /* Info.plist */,
+				F24D9852240F7AE90013B948 /* GoogleService-Info.plist */,
 			);
 			path = System_Support;
 			sourceTree = "<group>";
@@ -412,6 +426,7 @@
 			files = (
 				F4AB915B240CCD1C007DAB18 /* Roboto-Thin.ttf in Resources */,
 				F4AB9143240CC257007DAB18 /* LaunchScreen.storyboard in Resources */,
+				F24D9853240F7AEA0013B948 /* GoogleService-Info.plist in Resources */,
 				F4AB915C240CCD1C007DAB18 /* Roboto-Black.ttf in Resources */,
 				F4AB915A240CCD1C007DAB18 /* Roboto-Bold.ttf in Resources */,
 				F4AB9159240CCD1C007DAB18 /* Roboto-Regular.ttf in Resources */,
@@ -501,6 +516,7 @@
 				F4AB9149240CC257007DAB18 /* TextFieldWithSeperator.swift in Sources */,
 				F4AB9147240CC257007DAB18 /* AverageView.swift in Sources */,
 				F4AB912C240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift in Sources */,
+				F24D9856240F7CFD0013B948 /* FirebaseAuthAccessible.swift in Sources */,
 				F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */,
 				F4DA068D240EBB04000F4C35 /* MonthlySpredViewController.swift in Sources */,
 				F4AB9144240CC257007DAB18 /* DatePickerTextView.swift in Sources */,

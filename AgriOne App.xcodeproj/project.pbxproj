@@ -10,6 +10,7 @@
 		9C80967AD6D42EA74ABD2AB1 /* Pods_AgriOne_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */; };
 		F24D9853240F7AEA0013B948 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F24D9852240F7AE90013B948 /* GoogleService-Info.plist */; };
 		F24D9856240F7CFD0013B948 /* FirebaseAuthAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24D9855240F7CFD0013B948 /* FirebaseAuthAccessible.swift */; };
+		F24D9858240FBFE10013B948 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24D9857240FBFE10013B948 /* AccountView.swift */; };
 		F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB90EA240CC027007DAB18 /* AppDelegate.swift */; };
 		F4AB9102240CC029007DAB18 /* AgriOne_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9101240CC029007DAB18 /* AgriOne_AppTests.swift */; };
 		F4AB910D240CC029007DAB18 /* AgriOne_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB910C240CC029007DAB18 /* AgriOne_AppUITests.swift */; };
@@ -67,6 +68,7 @@
 		AC7B0222D623E6E2229D1E8B /* Pods_AgriOne_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgriOne_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24D9852240F7AE90013B948 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F24D9855240F7CFD0013B948 /* FirebaseAuthAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthAccessible.swift; sourceTree = "<group>"; };
+		F24D9857240FBFE10013B948 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		F4AB90E7240CC027007DAB18 /* AgriOne App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgriOne App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB90EA240CC027007DAB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AB90F8240CC029007DAB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				F4AB913B240CC257007DAB18 /* TextFieldWithSeperator.swift */,
 				F4DA068E240EC343000F4C35 /* LineChart.swift */,
 				F4DA0692240ED397000F4C35 /* BarChart.swift */,
+				F24D9857240FBFE10013B948 /* AccountView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				F4AB9146240CC257007DAB18 /* DatePickerView.swift in Sources */,
 				F4AB914D240CC257007DAB18 /* Extenstion.swift in Sources */,
 				F4AB914C240CC257007DAB18 /* AppColor.swift in Sources */,
+				F24D9858240FBFE10013B948 /* AccountView.swift in Sources */,
 				F4AB9148240CC257007DAB18 /* CircleProgressView.swift in Sources */,
 				F4AB9145240CC257007DAB18 /* ButtonWithImage.swift in Sources */,
 				F4AB9149240CC257007DAB18 /* TextFieldWithSeperator.swift in Sources */,

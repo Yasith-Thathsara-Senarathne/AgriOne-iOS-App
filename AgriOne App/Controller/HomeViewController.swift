@@ -19,6 +19,8 @@ class HomeViewController:MNkViewController{
     private var secoendSV:UIStackView!
     private var thirdSV:UIStackView!
     private var mainSV:UIStackView!
+    private var userAccButton:UIButton!
+    private var accountView:AccountView!
     
     private var navigationHeight:CGFloat{
         return self.navigationController?.navigationBar.frame.size.height ?? 80
@@ -27,11 +29,11 @@ class HomeViewController:MNkViewController{
     override func config() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         title = "Dashboard"
+        setNavigationBarItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -101,6 +103,17 @@ class HomeViewController:MNkViewController{
         mainSV.spacing = 40
         mainSV.distribution = .fill
         
+        userAccButton = UIButton()
+        userAccButton.clipsToBounds = true
+        userAccButton.setImage(#imageLiteral(resourceName: "user").withRenderingMode(.alwaysTemplate), for: .normal)
+        userAccButton.imageView?.tintColor = AppColor.riverBed
+        userAccButton.isHidden = true
+        userAccButton.addTarget(self, action: #selector(userTappedUserAccountButton), for: .touchUpInside)
+        
+        accountView = AccountView()
+        accountView.isHidden = true
+        
+        
     }
     
     override func insertAndLayoutSubviews() {
@@ -112,7 +125,20 @@ class HomeViewController:MNkViewController{
         scrollView.addSubview(mainSV)
         
         mainSV.activateLayouts(to: scrollView, [.top:view.safeAreaInsets.top + navigationHeight + 40,.leading:10,.traling:-10,.width:view.bounds.size.width-10-10])
-
+        
+        scrollView.addSubview(accountView)
+        
+        accountView.activateLayouts(to: scrollView, [.top:5,.traling:-5,.height:view.frame.size.height*0.3,.width:view.frame.size.width*0.5], true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        userAccButton.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        userAccButton.isHidden = false
     }
     
     @objc func userTappedDOD() {
@@ -123,5 +149,22 @@ class HomeViewController:MNkViewController{
     @objc func userTappedMonthlySpred() {
         let monthlySpredVC = MonthlySpredViewController()
         self.navigationController?.pushViewController(monthlySpredVC, animated: true)
+    }
+}
+
+extension HomeViewController {
+    private func setNavigationBarItems(){
+        let imageSizeForLargeState:CGFloat = 40
+        let imageRightMargin:CGFloat = 16
+        let imageBottomMarginForLargeState:CGFloat = 12
+        
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationBar.addSubview(userAccButton)
+        userAccButton.layer.cornerRadius = imageSizeForLargeState / 2
+        userAccButton.activateLayouts(to: navigationBar, [.traling:-imageRightMargin,.bottom:-imageBottomMarginForLargeState,.height:imageSizeForLargeState,.width:imageSizeForLargeState])
+    }
+    
+    @objc private func userTappedUserAccountButton() {
+        accountView.isHidden = false
     }
 }

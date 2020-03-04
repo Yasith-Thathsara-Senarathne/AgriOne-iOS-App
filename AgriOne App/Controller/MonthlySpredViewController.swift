@@ -21,6 +21,7 @@ class MonthlySpredViewController:MNkViewController,GetLineChartData {
     
     override func config() {
         title = "Monthly Spred Chart"
+        setNavigationBarItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +61,17 @@ public class LineChartFormatter:NSObject,IAxisValueFormatter {
     
     public func setValues(values:[String]) {
         self.weeklyNames = values
+    }
+}
+
+extension MonthlySpredViewController {
+    private func setNavigationBarItems(){
+        let addButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "report"), style: .plain, target: self, action: #selector(userTappedGenerateReportButton))
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc private func userTappedGenerateReportButton() {
+        
     }
 }
 

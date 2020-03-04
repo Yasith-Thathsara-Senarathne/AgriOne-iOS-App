@@ -32,6 +32,7 @@ class WeeklySpredViewController:MNkViewController,GetBarChartData {
     
     override func config() {
         title = "Week \(weekNo+1) Spred Chart"
+        setNavigationBarItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,5 +71,16 @@ public class BarChartFormatter:NSObject,IAxisValueFormatter {
     
     public func setValues(values:[String]) {
         self.dayNames = values
+    }
+}
+
+extension WeeklySpredViewController {
+    private func setNavigationBarItems(){
+        let addButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "report"), style: .plain, target: self, action: #selector(userTappedGenerateReportButton))
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc private func userTappedGenerateReportButton() {
+        
     }
 }

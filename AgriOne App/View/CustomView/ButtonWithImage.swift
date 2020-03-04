@@ -21,6 +21,7 @@ class ButtonWithImage:MNkView{
         imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
+        imageView.tintColor = AppColor.pictonBlue
 
         button = UIButton()
         

@@ -11,5 +11,7 @@ target 'AgriOne App' do
     pod 'Firebase/Analytics'
     pod 'Firebase/Auth'
     pod "LinearProgressBar"
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
 end

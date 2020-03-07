@@ -8,7 +8,7 @@
 
 import MNkSupportUtilities
 
-class HomeViewController:MNkViewController{
+class HomeViewController:MNkViewController,FireAuthAccessible {
     private var scrollView:UIScrollView!
     private var detectionOfDaysButton:ButtonWithImage!
     private var monthlyDashboardButton:ButtonWithImage!
@@ -22,8 +22,12 @@ class HomeViewController:MNkViewController{
     private var userAccButton:UIButton!
     private var accountView:AccountView!
     
-    private var navigationHeight:CGFloat{
-        return self.navigationController?.navigationBar.frame.size.height ?? 80
+    private var viewWidth:CGFloat {
+        return self.view.frame.size.width
+    }
+    
+    private var viewHeight:CGFloat {
+        return self.view.frame.size.height
     }
     
     override func config() {
@@ -66,6 +70,7 @@ class HomeViewController:MNkViewController{
         locationButton.button.setTitle("Locations", for: .normal)
         locationButton.button.setTitleColor(AppColor.slateGray, for: .normal)
         locationButton.imageView.image = #imageLiteral(resourceName: "pin")
+        locationButton.button.addTarget(self, action: #selector(userTappedLocations), for: .touchUpInside)
         
         tempretureButton = ButtonWithImage()
         tempretureButton.backgroundColor = AppColor.white
@@ -74,6 +79,7 @@ class HomeViewController:MNkViewController{
         tempretureButton.button.setTitle("Tempreture", for: .normal)
         tempretureButton.button.setTitleColor(AppColor.slateGray, for: .normal)
         tempretureButton.imageView.image = #imageLiteral(resourceName: "hot")
+        tempretureButton.button.addTarget(self, action: #selector(userTappedTempreture), for: .touchUpInside)
         
         aboutButton = ButtonWithImage()
         aboutButton.backgroundColor = AppColor.white
@@ -82,6 +88,7 @@ class HomeViewController:MNkViewController{
         aboutButton.button.setTitle("About Us", for: .normal)
         aboutButton.button.setTitleColor(AppColor.slateGray, for: .normal)
         aboutButton.imageView.image = #imageLiteral(resourceName: "about")
+        aboutButton.button.addTarget(self, action: #selector(userTappedAboutUs), for: .touchUpInside)
         
         firstSV = UIStackView.init(arrangedSubviews: [detectionOfDaysButton, monthlyDashboardButton])
         firstSV.axis = .horizontal
@@ -112,6 +119,7 @@ class HomeViewController:MNkViewController{
         
         accountView = AccountView()
         accountView.isHidden = true
+        accountView.delegate = self
         
         
     }
@@ -120,15 +128,15 @@ class HomeViewController:MNkViewController{
         view.addSubview(scrollView)
         scrollView.contentInsetAdjustmentBehavior = .never
         
-        scrollView.activateLayouts(to: view, [.top:70,.leading:0,.traling:0,.bottom:0])
+        scrollView.activateLayouts(to: view, [.top:0,.leading:0,.traling:0,.bottom:0], true)
         
         scrollView.addSubview(mainSV)
         
-        mainSV.activateLayouts(to: scrollView, [.top:view.safeAreaInsets.top + navigationHeight + 40,.leading:10,.traling:-10,.width:view.bounds.size.width-10-10])
+        mainSV.activateLayouts(to: scrollView, [.top:30,.leading:10,.traling:-10,.width:viewWidth-10-10])
         
         scrollView.addSubview(accountView)
         
-        accountView.activateLayouts(to: scrollView, [.top:5,.traling:-5,.height:view.frame.size.height*0.3,.width:view.frame.size.width*0.5], true)
+        accountView.activateLayouts(to: scrollView, [.top:5,.traling:-5,.height:viewHeight*0.3,.width:viewWidth*0.5], true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -150,6 +158,21 @@ class HomeViewController:MNkViewController{
         let monthlySpredVC = MonthlySpredViewController()
         self.navigationController?.pushViewController(monthlySpredVC, animated: true)
     }
+    
+    @objc func userTappedLocations() {
+        let locationsVC = LocationsViewController()
+        self.navigationController?.pushViewController(locationsVC, animated: true)
+    }
+    
+    @objc func userTappedTempreture() {
+        let tempretureVC = TempretureViewController()
+        self.navigationController?.pushViewController(tempretureVC, animated: true)
+    }
+    
+    @objc func userTappedAboutUs() {
+        let aboutUsVC = AboutViewController()
+        self.navigationController?.pushViewController(aboutUsVC, animated: true)
+    }
 }
 
 extension HomeViewController {
@@ -166,5 +189,20 @@ extension HomeViewController {
     
     @objc private func userTappedUserAccountButton() {
         accountView.isHidden = false
+    }
+}
+
+extension HomeViewController:AccountDelegate {
+    func userTappedLogoutButton() {
+        accountView.isHidden = true
+        do {
+            try signOut()
+            let loginVC = LoginViewController()
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true, completion: nil)
+        }
+        catch {
+            
+        }
     }
 }

@@ -8,11 +8,17 @@
 
 import MNkSupportUtilities
 
+protocol AccountDelegate:class {
+    func userTappedLogoutButton()
+}
+
 class AccountView:MNkView {
     private var iconIV:UIImageView!
     private var userNameLabel:UILabel!
     private var logoutButton:UIButton!
     private var mainSV:UIStackView!
+    
+    var delegate:AccountDelegate?
     
     override func config() {
         backgroundColor = AppColor.white
@@ -35,6 +41,7 @@ class AccountView:MNkView {
         logoutButton.backgroundColor = AppColor.pictonBlue
         logoutButton.setTitle("Logout", for: .normal)
         logoutButton.titleEdgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: 5, right: 5)
+        logoutButton.addTarget(self, action: #selector(userTappedLogoutBtn), for: .touchUpInside)
         
         mainSV = UIStackView.init(arrangedSubviews: [iconIV,userNameLabel,logoutButton])
         mainSV.axis = .vertical
@@ -50,5 +57,8 @@ class AccountView:MNkView {
         logoutButton.activateLayouts([.height:35])
         
         iconIV.activateLayouts([.width:60,.height:60])
+    }
+    @objc private func userTappedLogoutBtn() {
+        delegate?.userTappedLogoutButton()
     }
 }

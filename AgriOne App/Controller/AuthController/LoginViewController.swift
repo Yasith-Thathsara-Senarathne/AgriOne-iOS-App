@@ -15,11 +15,21 @@ class LoginViewController: MNkViewController {
     private var seperateView:UIView!
     private var emailTextField:TextFleidWithSeperator!
     private var passwordTextField:TextFleidWithSeperator!
+    private var errorLabel:UILabel!
     private var forgotPasswordLabel:UILabel!
     private var signinButton:UIButton!
+    private var authLoaderView:AuthLoaderView!
     
-    private var viewHeight:CGFloat{
+    private var viewHeight:CGFloat {
         return view.bounds.height
+    }
+    
+    private var emptySigninDefaultError:String {
+        return "Email or password cannot be empty."
+    }
+    
+    private var signinDefaultError:String {
+        return "Oops! Some error has occured while sign in. Try again in later."
     }
 
     override func viewDidLoad() {
@@ -44,23 +54,28 @@ class LoginViewController: MNkViewController {
         welcomeLabel.numberOfLines = 0
         welcomeLabel.textColor = AppColor.black
         welcomeLabel.font = AppFont.font(with: .bold, size: 30)
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
         
         seperateView = UIView()
         seperateView.backgroundColor = AppColor.pictonBlue
-        seperateView.translatesAutoresizingMaskIntoConstraints = false
         
         emailTextField = TextFleidWithSeperator()
         emailTextField.textFeild.placeholder = "Email"
         emailTextField.textFeild.font = .systemFont(ofSize: 13, weight: .medium)
         emailTextField.seperateView.backgroundColor = AppColor.silver
-        emailTextField.translatesAutoresizingMaskIntoConstraints = false
         
         passwordTextField = TextFleidWithSeperator()
         passwordTextField.textFeild.placeholder = "Password"
         passwordTextField.textFeild.font = .systemFont(ofSize: 13, weight: .medium)
         passwordTextField.seperateView.backgroundColor = AppColor.silver
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextField.textFeild.isSecureTextEntry = true
+        
+        errorLabel = UILabel()
+        errorLabel.text = emptySigninDefaultError
+        errorLabel.numberOfLines = 0
+        errorLabel.textColor = AppColor.pinkyRed
+        errorLabel.font = .systemFont(ofSize: 13, weight: .medium)
+        errorLabel.textAlignment = .center
+        errorLabel.isHidden = true
         
         forgotPasswordLabel = UILabel()
         forgotPasswordLabel.text = "Forgot Password ?"
@@ -68,7 +83,6 @@ class LoginViewController: MNkViewController {
         forgotPasswordLabel.textColor = AppColor.slateGray
         forgotPasswordLabel.font = .systemFont(ofSize: 13, weight: .medium)
         forgotPasswordLabel.textAlignment = .right
-        forgotPasswordLabel.translatesAutoresizingMaskIntoConstraints = false
         
         signinButton = UIButton()
         signinButton.setTitle("SIGN IN", for: .normal)
@@ -77,7 +91,9 @@ class LoginViewController: MNkViewController {
         signinButton.layer.cornerRadius = 3
         signinButton.backgroundColor = AppColor.pictonBlue
         signinButton.addTarget(self, action: #selector(userTappedSignIn), for: .touchUpInside)
-        signinButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        authLoaderView = AuthLoaderView.init(frame: view.frame)
+        authLoaderView.loadinglabel.text = "Please Wait"
         
     }
     
@@ -94,7 +110,7 @@ class LoginViewController: MNkViewController {
         
         topLabelContainer.activateLayouts(to: view, [.top:10,.leading:18,.traling:-18,.height:viewHeight*0.2], true)
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextField,passwordTextField,forgotPasswordLabel,signinButton])
+        let stackView = UIStackView(arrangedSubviews: [emailTextField,passwordTextField,errorLabel,forgotPasswordLabel,signinButton])
         stackView.axis = .vertical
         stackView.spacing = 30
         stackView.distribution = .fill
@@ -106,23 +122,35 @@ class LoginViewController: MNkViewController {
         
         stackView.activateLayouts(to: view, [.top:viewHeight*0.4,.leading:18,.traling:-18])
         
+        view.addSubview(authLoaderView)
+        
+        authLoaderView.activateLayouts(to: self.view)
+        
     }
     
     
     @objc func userTappedSignIn(){
+        self.errorLabel.text = emptySigninDefaultError
+        self.errorLabel.isHidden = true
+        
         guard let email = emailTextField.textFeild.text,
             !email.isEmpty,
             let password = passwordTextField.textFeild.text,
             !password.isEmpty else {
+                self.errorLabel.isHidden = false
                 return
         }
         validateSignInValues(with: emailTextField.textFeild.text ?? "", password: passwordTextField.textFeild.text ?? "")
     }
     
     private func validateSignInValues(with email:String, password:String) {
+        self.authLoaderView.start()
         signInToFirebaseWithEmailPassword(with: email, password: password) { [weak self] (user, error) in
+            self?.authLoaderView.stop()
             guard let user = user,
                 error == nil else {
+                    self?.errorLabel.text = self?.signinDefaultError
+                    self?.errorLabel.isHidden = false
                     return
             }
             

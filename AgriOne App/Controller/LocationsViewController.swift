@@ -7,8 +7,11 @@
 //
 
 import MNkSupportUtilities
+import GoogleMaps
+import CoreLocation
 
 class LocationsViewController:MNkViewController {
+    private var mapView:MapView!
     
     override func config() {
         title = "Location Spreding"
@@ -17,5 +20,16 @@ class LocationsViewController:MNkViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    override func createViews() {
+        mapView = MapView()
+        mapView.map.padding.bottom = -10
+    }
+    
+    override func insertAndLayoutSubviews() {
+        view.addSubview(mapView)
+        
+        mapView.activateLayouts(to: self.view, [.top:0,.leading:0,.traling:0,.bottom:0], true)
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,FireAuthAccessible {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FireAuthAccessible {
         // Override point for customization after application launch.window = UIWindow()
         
         FirebaseApp.configure()
+        GMSServices.provideAPIKey(GenaricKeys.googleApiKey)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

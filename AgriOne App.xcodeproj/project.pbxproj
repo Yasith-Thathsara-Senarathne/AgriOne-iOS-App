@@ -15,6 +15,10 @@
 		F4119D72241386620025B53C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D71241386620025B53C /* AboutViewController.swift */; };
 		F4119D74241386E20025B53C /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D73241386E20025B53C /* LocationsViewController.swift */; };
 		F4119D76241387400025B53C /* tempretureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D75241387400025B53C /* tempretureViewController.swift */; };
+		F4119D782413B8F00025B53C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D772413B8F00025B53C /* MapView.swift */; };
+		F4119D7B2413BB620025B53C /* GenaricKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D7A2413BB620025B53C /* GenaricKeys.swift */; };
+		F4119D7D2413BDC10025B53C /* style_json.json in Resources */ = {isa = PBXBuildFile; fileRef = F4119D7C2413BDC10025B53C /* style_json.json */; };
+		F4119D7F2413C8770025B53C /* LocationManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D7E2413C8770025B53C /* LocationManagerHelper.swift */; };
 		F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB90EA240CC027007DAB18 /* AppDelegate.swift */; };
 		F4AB9102240CC029007DAB18 /* AgriOne_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB9101240CC029007DAB18 /* AgriOne_AppTests.swift */; };
 		F4AB910D240CC029007DAB18 /* AgriOne_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB910C240CC029007DAB18 /* AgriOne_AppUITests.swift */; };
@@ -77,6 +81,10 @@
 		F4119D71241386620025B53C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F4119D73241386E20025B53C /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		F4119D75241387400025B53C /* tempretureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempretureViewController.swift; sourceTree = "<group>"; };
+		F4119D772413B8F00025B53C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F4119D7A2413BB620025B53C /* GenaricKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenaricKeys.swift; sourceTree = "<group>"; };
+		F4119D7C2413BDC10025B53C /* style_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style_json.json; sourceTree = "<group>"; };
+		F4119D7E2413C8770025B53C /* LocationManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerHelper.swift; sourceTree = "<group>"; };
 		F4AB90E7240CC027007DAB18 /* AgriOne App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AgriOne App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB90EA240CC027007DAB18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4AB90F8240CC029007DAB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,6 +305,7 @@
 				F4DA068E240EC343000F4C35 /* LineChart.swift */,
 				F4DA0692240ED397000F4C35 /* BarChart.swift */,
 				F24D9857240FBFE10013B948 /* AccountView.swift */,
+				F4119D772413B8F00025B53C /* MapView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -316,6 +325,8 @@
 				F4AB9140240CC257007DAB18 /* AppColor.swift */,
 				F4AB9141240CC257007DAB18 /* Extenstion.swift */,
 				F4AB9142240CC257007DAB18 /* AppFont.swift */,
+				F4119D7A2413BB620025B53C /* GenaricKeys.swift */,
+				F4119D7E2413C8770025B53C /* LocationManagerHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 		F4AB914F240CCD1C007DAB18 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4119D7C2413BDC10025B53C /* style_json.json */,
 				F4AB9150240CCD1C007DAB18 /* Font */,
 			);
 			path = Resources;
@@ -457,6 +469,7 @@
 				F4AB9158240CCD1C007DAB18 /* Roboto-Light.ttf in Resources */,
 				F4AB915E240CCF99007DAB18 /* Assets.xcassets in Resources */,
 				F4AB9157240CCD1C007DAB18 /* Roboto-Medium.ttf in Resources */,
+				F4119D7D2413BDC10025B53C /* style_json.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +567,7 @@
 				F4AB914C240CC257007DAB18 /* AppColor.swift in Sources */,
 				F24D9858240FBFE10013B948 /* AccountView.swift in Sources */,
 				F4AB9148240CC257007DAB18 /* CircleProgressView.swift in Sources */,
+				F4119D782413B8F00025B53C /* MapView.swift in Sources */,
 				F4AB9145240CC257007DAB18 /* ButtonWithImage.swift in Sources */,
 				F4AB9149240CC257007DAB18 /* TextFieldWithSeperator.swift in Sources */,
 				F4AB9147240CC257007DAB18 /* AverageView.swift in Sources */,
@@ -562,8 +576,10 @@
 				F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */,
 				F4119D74241386E20025B53C /* LocationsViewController.swift in Sources */,
 				F4119D7024137F1B0025B53C /* AuthLoaderView.swift in Sources */,
+				F4119D7B2413BB620025B53C /* GenaricKeys.swift in Sources */,
 				F4DA068D240EBB04000F4C35 /* MonthlySpredViewController.swift in Sources */,
 				F4AB9144240CC257007DAB18 /* DatePickerTextView.swift in Sources */,
+				F4119D7F2413C8770025B53C /* LocationManagerHelper.swift in Sources */,
 				F4AB912B240CC23C007DAB18 /* DetectionOfDaysViewController.swift in Sources */,
 				F4119D76241387400025B53C /* tempretureViewController.swift in Sources */,
 				F4119D72241386620025B53C /* AboutViewController.swift in Sources */,

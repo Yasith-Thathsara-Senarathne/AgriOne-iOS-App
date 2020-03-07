@@ -7,6 +7,8 @@
 //
 
 import MNkSupportUtilities
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: MNkViewController {
     private var welcomeLabel:UILabel!
@@ -108,10 +110,34 @@ class LoginViewController: MNkViewController {
     
     
     @objc func userTappedSignIn(){
-        let homeVC = HomeViewController()
-        let navVC = UINavigationController.init(rootViewController: homeVC)
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true, completion: nil)
+        guard let email = emailTextField.textFeild.text,
+            !email.isEmpty,
+            let password = passwordTextField.textFeild.text,
+            !password.isEmpty else {
+                return
+        }
+        validateSignInValues(with: emailTextField.textFeild.text ?? "", password: passwordTextField.textFeild.text ?? "")
     }
+    
+    private func validateSignInValues(with email:String, password:String) {
+        signInToFirebaseWithEmailPassword(with: email, password: password) { [weak self] (user, error) in
+            guard let user = user,
+                error == nil else {
+                    return
+            }
+            
+            let homeVC = HomeViewController()
+            let navVC = UINavigationController.init(rootViewController: homeVC)
+            navVC.modalPresentationStyle = .fullScreen
+            self?.present(navVC, animated: true, completion: nil)
+        }
+    }
+}
 
+extension LoginViewController:FireAuthAccessible {
+    private func signInToFirebaseWithEmailPassword(with email:String, password:String,_ completed:@escaping (_ user:User?, _ error:String?)->()) {
+        Auth.auth().signIn(withEmail: email, password: password) { userResult, error in
+            completed(userResult?.user,error?.localizedDescription)
+        }
+    }
 }

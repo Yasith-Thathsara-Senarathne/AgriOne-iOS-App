@@ -22,7 +22,7 @@ class AccountView:MNkView {
     var delegate:AccountDelegate?
     
     override func config() {
-        backgroundColor = AppColor.black.withAlphaComponent(0.6)
+        backgroundColor = AppColor.black.withAlphaComponent(0.7)
         activeShadow(using: AppColor.white)
     }
     
@@ -35,7 +35,7 @@ class AccountView:MNkView {
         userNameLabel = UILabel()
         userNameLabel.textAlignment = .center
         userNameLabel.textColor = AppColor.white
-        userNameLabel.font = AppFont.font(with: .bold, size: 20)
+        userNameLabel.font = AppFont.font(with: .bold, size: 17)
         userNameLabel.text = "Admin"
         
         logoutButton = UIButton()
@@ -46,18 +46,17 @@ class AccountView:MNkView {
         
         mainSV = UIStackView.init(arrangedSubviews: [iconIV,userNameLabel,logoutButton])
         mainSV.axis = .vertical
-        mainSV.spacing = 6
-        mainSV.distribution = .fillProportionally
+        mainSV.spacing = 4
     }
     
     override func insertAndLayoutSubviews() {
         addSubview(mainSV)
         
-        mainSV.activateLayouts(to: self, [.top:5,.bottom:-10,.leading:5,.traling:-5])
+        mainSV.activateLayouts(to: self, [.top:10,.bottom:-10,.leading:5,.traling:-5])
         
-        logoutButton.activateLayouts([.height:35])
+        logoutButton.activateLayouts([.height:30])
         
-        iconIV.activateLayouts([.width:60,.height:60])
+        iconIV.activateLayouts([.height:40])
     }
     @objc private func userTappedLogoutBtn() {
         delegate?.userTappedLogoutButton()

@@ -13,6 +13,7 @@ protocol AccountDelegate:class {
 }
 
 class AccountView:MNkView {
+    private var containerView:UIView!
     private var iconIV:UIImageView!
     private var userNameLabel:UILabel!
     private var logoutButton:UIButton!
@@ -21,19 +22,19 @@ class AccountView:MNkView {
     var delegate:AccountDelegate?
     
     override func config() {
-        backgroundColor = AppColor.white
-        activeShadow(using: AppColor.black)
+        backgroundColor = AppColor.black.withAlphaComponent(0.6)
+        activeShadow(using: AppColor.white)
     }
     
     override func createViews() {
         iconIV = UIImageView.init(image: #imageLiteral(resourceName: "user").withRenderingMode(.alwaysTemplate))
-        iconIV.tintColor = AppColor.riverBed
+        iconIV.tintColor = AppColor.white
         iconIV.clipsToBounds = true
         iconIV.contentMode = .scaleAspectFit
         
         userNameLabel = UILabel()
         userNameLabel.textAlignment = .center
-        userNameLabel.textColor = AppColor.slateGray
+        userNameLabel.textColor = AppColor.white
         userNameLabel.font = AppFont.font(with: .bold, size: 20)
         userNameLabel.text = "Admin"
         
@@ -52,7 +53,7 @@ class AccountView:MNkView {
     override func insertAndLayoutSubviews() {
         addSubview(mainSV)
         
-        mainSV.activateLayouts(to: self, [.top:0,.bottom:-10,.leading:5,.traling:-5])
+        mainSV.activateLayouts(to: self, [.top:5,.bottom:-10,.leading:5,.traling:-5])
         
         logoutButton.activateLayouts([.height:35])
         

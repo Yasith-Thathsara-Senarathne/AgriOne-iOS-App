@@ -19,6 +19,7 @@ class TextFleidWithSeperator: MNkView {
     
     override func createViews(){
         textFeild = UITextField()
+        textFeild.textColor = AppColor.black
         textFeild.delegate = self
         textFeild.translatesAutoresizingMaskIntoConstraints = false
         

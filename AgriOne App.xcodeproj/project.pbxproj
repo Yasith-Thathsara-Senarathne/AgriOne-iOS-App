@@ -14,7 +14,7 @@
 		F4119D7024137F1B0025B53C /* AuthLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D6F24137F1B0025B53C /* AuthLoaderView.swift */; };
 		F4119D72241386620025B53C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D71241386620025B53C /* AboutViewController.swift */; };
 		F4119D74241386E20025B53C /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D73241386E20025B53C /* LocationsViewController.swift */; };
-		F4119D76241387400025B53C /* tempretureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D75241387400025B53C /* tempretureViewController.swift */; };
+		F4119D76241387400025B53C /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D75241387400025B53C /* TemperatureViewController.swift */; };
 		F4119D782413B8F00025B53C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D772413B8F00025B53C /* MapView.swift */; };
 		F4119D7B2413BB620025B53C /* GenaricKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4119D7A2413BB620025B53C /* GenaricKeys.swift */; };
 		F4119D7D2413BDC10025B53C /* style_json.json in Resources */ = {isa = PBXBuildFile; fileRef = F4119D7C2413BDC10025B53C /* style_json.json */; };
@@ -80,7 +80,7 @@
 		F4119D6F24137F1B0025B53C /* AuthLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoaderView.swift; sourceTree = "<group>"; };
 		F4119D71241386620025B53C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F4119D73241386E20025B53C /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
-		F4119D75241387400025B53C /* tempretureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempretureViewController.swift; sourceTree = "<group>"; };
+		F4119D75241387400025B53C /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		F4119D772413B8F00025B53C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F4119D7A2413BB620025B53C /* GenaricKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenaricKeys.swift; sourceTree = "<group>"; };
 		F4119D7C2413BDC10025B53C /* style_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style_json.json; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 				F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */,
 				F4119D71241386620025B53C /* AboutViewController.swift */,
 				F4119D73241386E20025B53C /* LocationsViewController.swift */,
-				F4119D75241387400025B53C /* tempretureViewController.swift */,
+				F4119D75241387400025B53C /* TemperatureViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -581,7 +581,7 @@
 				F4AB9144240CC257007DAB18 /* DatePickerTextView.swift in Sources */,
 				F4119D7F2413C8770025B53C /* LocationManagerHelper.swift in Sources */,
 				F4AB912B240CC23C007DAB18 /* DetectionOfDaysViewController.swift in Sources */,
-				F4119D76241387400025B53C /* tempretureViewController.swift in Sources */,
+				F4119D76241387400025B53C /* TemperatureViewController.swift in Sources */,
 				F4119D72241386620025B53C /* AboutViewController.swift in Sources */,
 				F4AB912A240CC23C007DAB18 /* HomeViewController.swift in Sources */,
 			);

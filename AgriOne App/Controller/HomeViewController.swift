@@ -47,7 +47,7 @@ class HomeViewController:MNkViewController,FireAuthAccessible {
         
         detectionOfDaysButton = ButtonWithImage()
         detectionOfDaysButton.backgroundColor = AppColor.white
-        detectionOfDaysButton.activeShadow(using: AppColor.slateGray)
+        detectionOfDaysButton.activeShadow(using: AppColor.black)
         detectionOfDaysButton.layer.cornerRadius = 4
         detectionOfDaysButton.button.setTitle("Detection Of Days", for: .normal)
         detectionOfDaysButton.button.setTitleColor(AppColor.slateGray, for: .normal)
@@ -56,7 +56,7 @@ class HomeViewController:MNkViewController,FireAuthAccessible {
         
         monthlyDashboardButton = ButtonWithImage()
         monthlyDashboardButton.backgroundColor = AppColor.white
-        monthlyDashboardButton.activeShadow(using: AppColor.slateGray)
+        monthlyDashboardButton.activeShadow(using: AppColor.black)
         monthlyDashboardButton.layer.cornerRadius = 4
         monthlyDashboardButton.button.setTitle("Monthly Spred", for: .normal)
         monthlyDashboardButton.button.setTitleColor(AppColor.slateGray, for: .normal)
@@ -65,7 +65,7 @@ class HomeViewController:MNkViewController,FireAuthAccessible {
         
         locationButton = ButtonWithImage()
         locationButton.backgroundColor = AppColor.white
-        locationButton.activeShadow(using: AppColor.slateGray)
+        locationButton.activeShadow(using: AppColor.black)
         locationButton.layer.cornerRadius = 4
         locationButton.button.setTitle("Locations", for: .normal)
         locationButton.button.setTitleColor(AppColor.slateGray, for: .normal)
@@ -74,16 +74,16 @@ class HomeViewController:MNkViewController,FireAuthAccessible {
         
         tempretureButton = ButtonWithImage()
         tempretureButton.backgroundColor = AppColor.white
-        tempretureButton.activeShadow(using: AppColor.slateGray)
+        tempretureButton.activeShadow(using: AppColor.black)
         tempretureButton.layer.cornerRadius = 4
-        tempretureButton.button.setTitle("Tempreture", for: .normal)
+        tempretureButton.button.setTitle("Temperature", for: .normal)
         tempretureButton.button.setTitleColor(AppColor.slateGray, for: .normal)
         tempretureButton.imageView.image = #imageLiteral(resourceName: "hot")
         tempretureButton.button.addTarget(self, action: #selector(userTappedTempreture), for: .touchUpInside)
         
         aboutButton = ButtonWithImage()
         aboutButton.backgroundColor = AppColor.white
-        aboutButton.activeShadow(using: AppColor.slateGray)
+        aboutButton.activeShadow(using: AppColor.black)
         aboutButton.layer.cornerRadius = 4
         aboutButton.button.setTitle("About Us", for: .normal)
         aboutButton.button.setTitleColor(AppColor.slateGray, for: .normal)
@@ -136,7 +136,7 @@ class HomeViewController:MNkViewController,FireAuthAccessible {
         
         scrollView.addSubview(accountView)
         
-        accountView.activateLayouts(to: scrollView, [.top:5,.traling:-5,.height:viewHeight*0.3,.width:viewWidth*0.5], true)
+        accountView.activateLayouts(to: scrollView, [.traling:-36,.height:viewWidth*0.4,.width:viewWidth*0.4], true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -165,7 +165,7 @@ class HomeViewController:MNkViewController,FireAuthAccessible {
     }
     
     @objc func userTappedTempreture() {
-        let tempretureVC = TempretureViewController()
+        let tempretureVC = TemperatureViewController()
         self.navigationController?.pushViewController(tempretureVC, animated: true)
     }
     
@@ -188,7 +188,11 @@ extension HomeViewController {
     }
     
     @objc private func userTappedUserAccountButton() {
-        accountView.isHidden = false
+        if accountView.isHidden {
+            accountView.isHidden = false
+        }else {
+            accountView.isHidden = true
+        }
     }
 }
 

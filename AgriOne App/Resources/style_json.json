@@ -1,14 +1,2 @@
 [
-    {
-        "featureType": "administrative.province",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#00ffff"
-            }
-        ]
-    }
 ]

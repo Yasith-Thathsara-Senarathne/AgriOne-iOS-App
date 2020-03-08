@@ -20,9 +20,16 @@ class MapView:MNkView {
     
     override func createViews() {
         map = GMSMapView()
-        map.isMyLocationEnabled = true
+//        map.isMyLocationEnabled = true
+//        map.settings.myLocationButton = true
+        map.settings.scrollGestures = true
+        map.settings.zoomGestures = true
+        map.settings.rotateGestures = true
+        map.settings.tiltGestures = true
+        map.isIndoorEnabled = false
         let styleUrl = Bundle.main.url(forResource: "style_json", withExtension: "json")!
         map.mapStyle = try? GMSMapStyle.init(contentsOfFileURL: styleUrl)
+        map.delegate = self
     }
     
     override func insertAndLayoutSubviews() {
@@ -32,8 +39,17 @@ class MapView:MNkView {
     }
     
     func setUserRegion(){
-        guard let coodinate = locationManager.currentLocation?.coordinate else{return}
-        map.camera = GMSCameraPosition.init(target: coodinate, zoom: 13, bearing: 0, viewingAngle: 0)
+//        guard let coodinate = locationManager.currentLocation?.coordinate else{return}
+//        print("lat",coodinate.latitude)
+//        print("lang",coodinate.longitude)
+        let coodinate = CLLocationCoordinate2D.init(latitude: 7.139555303279309, longitude: 80.08497431874275)
+        map.camera = GMSCameraPosition.init(target: coodinate, zoom: 15.8, bearing: 0, viewingAngle: 0)
+    }
+}
+
+extension MapView:GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        print("Coordinates: ",coordinate)
     }
 }
 

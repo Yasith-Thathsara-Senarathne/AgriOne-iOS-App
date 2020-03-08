@@ -20,6 +20,9 @@ class LocationsViewController:MNkViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        
+        mapView.setUserRegion()
+        setMapPolyLine()
     }
     
     override func createViews() {
@@ -31,5 +34,18 @@ class LocationsViewController:MNkViewController {
         view.addSubview(mapView)
         
         mapView.activateLayouts(to: self.view, [.top:0,.leading:0,.traling:0,.bottom:0], true)
+    }
+    
+    private func setMapPolyLine() {
+        let path = GMSMutablePath()
+        path.add(CLLocationCoordinate2D(latitude: 7.144, longitude: 80.081))
+        path.add(CLLocationCoordinate2D(latitude: 7.135, longitude: 80.083))
+        path.add(CLLocationCoordinate2D(latitude: 7.135, longitude: 80.089))
+        path.add(CLLocationCoordinate2D(latitude: 7.144, longitude: 80.086))
+        path.add(CLLocationCoordinate2D(latitude: 7.144, longitude: 80.081))
+
+        let rectangle = GMSPolyline(path: path)
+        rectangle.strokeColor = AppColor.chambray
+        rectangle.map = mapView.map
     }
 }

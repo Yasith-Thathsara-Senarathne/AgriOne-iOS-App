@@ -8,10 +8,11 @@
 
 import MNkSupportUtilities
 
-class TempretureViewController:MNkViewController {
+class TemperatureViewController:MNkViewController {
     
     override func config() {
-        title = "Tempreture Spreding"
+        title = "Temperature Spreding"
+        view.backgroundColor = AppColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {

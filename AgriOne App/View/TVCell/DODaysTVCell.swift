@@ -8,11 +8,17 @@
 
 import MNkSupportUtilities
 
-class DODaysTVCell:MNkTVCell_Parameter<Dod>{
+class DODaysTVCell:MNkTableViewCell {
     private var dateLabel:UILabel!
     
     private var cellHeight:CGFloat{
         return 40
+    }
+    
+    var date:String! {
+        didSet {
+            updateUIWithData()
+        }
     }
     
     override func config() {
@@ -35,7 +41,7 @@ class DODaysTVCell:MNkTVCell_Parameter<Dod>{
         dateLabel.activateLayouts(to: self, [.top:20,.bottom:-20,.leading:10,.traling:-10,.centerY:0])
     }
     
-    override func updateUI(with data: Dod) {
-        dateLabel.text = data.date
+    private func updateUIWithData() {
+        dateLabel.text = date
     }
 }

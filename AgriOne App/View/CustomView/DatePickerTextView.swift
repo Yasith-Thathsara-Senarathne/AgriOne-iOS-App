@@ -60,7 +60,7 @@ class DataPickerTextView:MNkView{
      @objc func donedatePicker(){
 
       let formatter = DateFormatter()
-      formatter.dateFormat = "dd/MM/yyyy"
+      formatter.dateFormat = "yyyy-MM-dd"
       textDatePicker.text = formatter.string(from: datePicker.date)
       self.endEditing(true)
     }

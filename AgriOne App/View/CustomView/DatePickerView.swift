@@ -14,8 +14,8 @@ protocol DatePickerDelegate:class {
 
 class DatePickerView:MNkView{
     private var stackView:UIStackView!
-    private var fromDatePicker:DataPickerTextView!
-    private var toDatePicker:DataPickerTextView!
+    var fromDatePicker:DataPickerTextView!
+    var toDatePicker:DataPickerTextView!
     var searchButton:UIButton!
     
     var delegate:DatePickerDelegate?

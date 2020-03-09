@@ -47,6 +47,8 @@
 		F4AB915B240CCD1C007DAB18 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9155240CCD1C007DAB18 /* Roboto-Thin.ttf */; };
 		F4AB915C240CCD1C007DAB18 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4AB9156240CCD1C007DAB18 /* Roboto-Black.ttf */; };
 		F4AB915E240CCF99007DAB18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AB915D240CCF99007DAB18 /* Assets.xcassets */; };
+		F4C7B140241682120070FF77 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7B13F241682120070FF77 /* PDFCreator.swift */; };
+		F4C7B143241683950070FF77 /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7B142241683940070FF77 /* PDFPreviewViewController.swift */; };
 		F4DA068D240EBB04000F4C35 /* MonthlySpredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */; };
 		F4DA068F240EC343000F4C35 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA068E240EC343000F4C35 /* LineChart.swift */; };
 		F4DA0691240ED28B000F4C35 /* WeeklySpredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */; };
@@ -119,6 +121,8 @@
 		F4AB9155240CCD1C007DAB18 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		F4AB9156240CCD1C007DAB18 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		F4AB915D240CCF99007DAB18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4C7B13F241682120070FF77 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
+		F4C7B142241683940070FF77 /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
 		F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySpredViewController.swift; sourceTree = "<group>"; };
 		F4DA068E240EC343000F4C35 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpredViewController.swift; sourceTree = "<group>"; };
@@ -252,15 +256,9 @@
 		F4AB9123240CC23C007DAB18 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F4C7B1412416836F0070FF77 /* HomeController */,
 				F4AB9124240CC23C007DAB18 /* AuthController */,
-				F4AB9126240CC23C007DAB18 /* HomeViewController.swift */,
-				F4AB9127240CC23C007DAB18 /* DetectionOfDaysViewController.swift */,
-				F4AB9128240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift */,
-				F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */,
-				F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */,
-				F4119D71241386620025B53C /* AboutViewController.swift */,
-				F4119D73241386E20025B53C /* LocationsViewController.swift */,
-				F4119D75241387400025B53C /* TemperatureViewController.swift */,
+				F4C7B142241683940070FF77 /* PDFPreviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,6 +304,7 @@
 				F4DA0692240ED397000F4C35 /* BarChart.swift */,
 				F24D9857240FBFE10013B948 /* AccountView.swift */,
 				F4119D772413B8F00025B53C /* MapView.swift */,
+				F4C7B13F241682120070FF77 /* PDFCreator.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -351,6 +350,21 @@
 				F4AB9156240CCD1C007DAB18 /* Roboto-Black.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		F4C7B1412416836F0070FF77 /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				F4AB9126240CC23C007DAB18 /* HomeViewController.swift */,
+				F4AB9127240CC23C007DAB18 /* DetectionOfDaysViewController.swift */,
+				F4AB9128240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift */,
+				F4DA068C240EBB04000F4C35 /* MonthlySpredViewController.swift */,
+				F4DA0690240ED28B000F4C35 /* WeeklySpredViewController.swift */,
+				F4119D71241386620025B53C /* AboutViewController.swift */,
+				F4119D73241386E20025B53C /* LocationsViewController.swift */,
+				F4119D75241387400025B53C /* TemperatureViewController.swift */,
+			);
+			path = HomeController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,7 +588,9 @@
 				F4AB912C240CC23C007DAB18 /* DetectionOfDesieaseViewController.swift in Sources */,
 				F24D9856240F7CFD0013B948 /* FirebaseAuthAccessible.swift in Sources */,
 				F4AB90EB240CC027007DAB18 /* AppDelegate.swift in Sources */,
+				F4C7B140241682120070FF77 /* PDFCreator.swift in Sources */,
 				F4119D74241386E20025B53C /* LocationsViewController.swift in Sources */,
+				F4C7B143241683950070FF77 /* PDFPreviewViewController.swift in Sources */,
 				F4119D7024137F1B0025B53C /* AuthLoaderView.swift in Sources */,
 				F4119D7B2413BB620025B53C /* GenaricKeys.swift in Sources */,
 				F4DA068D240EBB04000F4C35 /* MonthlySpredViewController.swift in Sources */,

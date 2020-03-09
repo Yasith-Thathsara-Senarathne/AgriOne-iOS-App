@@ -70,7 +70,8 @@ class DODesieaseTVCell:MNkTVCell_Parameter<Desiease>{
     }
     
     override func updateUI(with data: Desiease) {
-        desieaseIV.image = data.image
+        let url = URL.init(string: data.image ?? "")
+        desieaseIV.sd_setImage(with: url, completed: nil)
         progressBar.progressValue = CGFloat(data.precentage ?? 0)
         percentageLabel.text = (data.precentage?.description ?? "0")+" %"
     }

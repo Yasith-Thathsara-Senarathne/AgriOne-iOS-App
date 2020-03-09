@@ -9,7 +9,7 @@
 import MNkSupportUtilities
 import  Charts
 
-class AverageView:MNkView{
+class AverageView:MNkView {
     var dateLabel:UILabel!
     var circleProgessView:CircleProgressView!
     private var mainSV:UIStackView!
